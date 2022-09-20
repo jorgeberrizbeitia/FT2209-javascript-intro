@@ -77,7 +77,7 @@ console.log(variable7, typeof variable7)
 
 
 
-// STRINGS
+// * STRINGS
 
 
 let fruit1 = "fresa";
@@ -94,7 +94,7 @@ let receta = `${cantidadReceta} recetas llevan: ${fruit1}, ${fruit2} y tambien $
 
 console.log(receta)
 
-// POSICIONES (INDICES) Y LENGTH DE LOS STRINGS
+// * POSICIONES (INDICES) Y LENGTH DE LOS STRINGS
 
 
 let simpleString = "hola";
@@ -116,9 +116,11 @@ let longString = "jsadakudjagywjdgyajdgansbdjabhwjh"
 console.log( longString[0] )
 console.log( longString[ longString.length - 1 ] )
 
+// * importante
+// propiedades como length no llevan parentesis. son basadas en variables.
+// metodos si llevan parentesis. son basados en funciones. 
 
-
-// OTROS METODOS COMUNES DE STRINGS
+// * OTROS METODOS COMUNES DE STRINGS
 
 
 let newString = "bananaramawakakakasasamiramiraheheh";
@@ -136,7 +138,118 @@ console.log( newSection[0].toUpperCase() + newSection.slice(1) )
 // console.log( newSection[0].toUpperCase() + newSection.slice(1, 4) )
 
 
-console.log(  newSection.startsWith("hola") )
+
+let name = "carolina alonso" // J.C.
+
+let espacioVacio = name.indexOf(" ")
+let primeraLetra = name[0].toUpperCase()
+let segundaLetra = name[espacioVacio+1].toUpperCase()
+console.log( primeraLetra + "." + segundaLetra + "." )
+
+
+// * NUMBERS
+
+let posNum = 424;
+let negNum = -7346872;
+let floatNum = 43.23423
+
+console.log(posNum, negNum, floatNum)
+
+
+
+// * operadores matematicos
+
+let num1 = 6;
+let num2 = 2;
+
+console.log(num1 + num2) // 8
+console.log(num1 - num2) // 4
+console.log(num1 * num2) // 12
+console.log(num1 / num2) // 3
+console.log(num1 ** num2) // 36
+
+// modulo
+console.log(num1 % num2)
+// el restante de la division. Si no es exacta.
+
+console.log(7 % 2) // 2 + 2 + 2 + 1
+// lo usamos para saber si un numero es divisible entre otro
+
+console.log(227462367 % 2) 
+// si es 0, es par
+// si es 1, es impar
+
+
+
+// operadores de asignacion + operadores matematicos
+
+let myNewAge = 20;
+const valorOriginal = myNewAge
+
+// myNewAge = 21
+myNewAge = myNewAge + 1
+
+console.log(myNewAge)
+
+myNewAge += 1;
+
+console.log(myNewAge)
+
+myNewAge++ // solo para incrementos 1
+// los tres hacen exactamente lo mismo
+
+console.log(myNewAge)
+
+console.log(myNewAge)
+console.log("valorOriginal", valorOriginal)
+
+
+
+// COERCION => cuando el sistema cambia los tipos de data
+
+console.log(5 + 7)
+console.log("5" + "7")
+
+// operador + tiene doble funcion
+// function suma (para numeros)
+// funcion concatenacion (para strings)
+
+console.log("5" - "3") // numero 2.
+// usamos operado matematico -
+// consigue un string y lo intenta coercionar a un numero
+// "5" a 5
+// "3" a 3
+
+
+console.log("javascript" - "script") // ??? Not a Number
+// intenta hacer coercion y no puede convertir el str a numero
+
+
+console.log( "3" + 5 )
+console.log( 3 + "5" )
+// el operador + siempre actua primero como concatenador. y luego como suma.
+
+
+
+// metodos y objetos globales
+
+// String
+// Number
+// Boolean
+// Math => debe estar en mayuscula
+console.log( Math.random() )
+
+// un numero aleatorio entero entre 0 y 10
+
+let randomNumber = Math.random() * 10
+
+// Math.floor() // llevar un numero decimal a su entero más bajo
+
+console.log( Math.floor(randomNumber) )
+
+// tambien existen Math.ceil y Math.round
+
+console.log( Math.floor( Math.random() * 100 ) )
 
 
 
