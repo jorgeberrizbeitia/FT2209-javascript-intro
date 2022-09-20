@@ -252,5 +252,176 @@ console.log( Math.floor(randomNumber) )
 console.log( Math.floor( Math.random() * 100 ) )
 
 
+// * BOOLEANOS
 
 
+let posBool = true;
+let negBool = false;
+
+
+console.log(negBool)
+
+// operador no (!)
+
+console.log(!posBool)
+
+
+
+// OPERADORES DE COMPARACION
+
+let food1 = "pizza";
+let food2 = "hamburguesa";
+let food3 = "pizza"
+
+// "===" estrictamente igual
+// "!==" estrictamente no igual
+console.log( food1 === food3 ) // true
+
+console.log( !(food1 === food3) ) // falso. igual que abajo.
+console.log( food1 !== food3 ) // false. igual que arriba.
+
+
+let newNum1 = 10;
+let newNum2 = 10;
+
+console.log(newNum1 >= newNum2) // true
+
+// > mayor que
+// < menor que
+// >= mayor o igual que
+// <= menor o igual que
+
+let char1 = "a";
+let char2 = "f";
+
+console.log( char1 < char2 )
+
+
+
+console.log("5" === "5") // true
+console.log("5" === 5) // false. === verifica valor y tipo de data
+console.log("5" == 5) // coercion. true.
+
+// siempre utilizar === !==
+
+
+
+// OPERADORES LOGICOS
+
+// &&
+// ||
+
+console.log( 10 === 10 && 20 === 20 )
+// && si al menos una es falso, todo es falso.
+
+
+
+console.log( "hola" === "adios" || "patata" === "patata" )
+// || si al menos uno es true, entonces todo es verdadero.
+
+
+
+
+// ACTIVIDAD.
+
+// Guess the console input for each console.log
+
+console.log("ACTIVIDAD")
+
+console.log(true && false); // false
+console.log(11 % 3 === 2); // true
+console.log(false || true); // true
+console.log(!true || false); // false
+console.log(17 == '17'); // true
+console.log(123 === '123'); // false
+console.log('Hello' - 'llo'); // NaN
+
+let statement = 'I love JavaScript!';
+let subStatement = statement.slice(7, statement.length);
+console.log(subStatement); 
+
+statement[0].toLowerCase(); // no muta el string. Strings son inmutables.
+console.log(statement); "I love Javascript!"
+
+// "i"
+// "JAVASCRIPT!"
+// "i love javascript!"
+// "j"
+// "I love Javascript!"
+
+
+
+// * CONDICIONALES
+
+
+// IF IF ELSE
+
+let naranjas = 0;
+
+// if (condicion o condiciones) {
+//   codigo a ejecutar si las condiciones son true
+// }
+
+if (naranjas === 0) {
+  console.log("no tienes naranjas")
+} else if (naranjas > 0 && naranjas < 5) {
+  console.log("tienes naranjas para hacer un juego")
+} else {
+  console.log("puedes hacer muchos jugos")
+}
+
+
+// THRUTHY Y FALSY
+
+let limones = 0
+if (limones) {
+  // el valor 10 tiene una similitud al valor true. es Thruthy
+  console.log("esto se ejecuta?")
+}
+
+// 0 es un valor falsy. en un condicional se envalua como false.
+
+if (0 || "" || undefined || NaN || null || false) {
+  // .todos los elementos arriba son Falsy
+  console.log("esto nunca se verá")
+}
+
+
+let banana = 5;
+
+switch(banana) {
+  case 0:
+    console.log("no tienes bananas para hacer jugo");
+    break;
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+    console.log("SI tienes bananas para hacer jugo");
+    break;
+  default:
+    // lo mismo que el ultimo else
+    console.log("tienes para hacer muchos jugos")
+}
+
+
+
+// FOR LOOP
+
+// 1. una variable control que determina el flujo del bucle
+// 2. condicion que continua ejecutando el bucle.
+// 3. controla como avanza el bucle, manipula la variable control
+// let patata;
+for (let patata = 0; patata < 10; patata = patata + 1) {
+  // 1. solamenta una vez. let i = 0 (UNA VEZ al inicio)
+  // 2. if (i < 10) ejecuta el codigo y continua el bucle
+  // if false, se detiene el bucle
+
+  // accion a ejecutar
+  console.log("ejecutando el codigo varias veces", patata)
+
+
+  // 3. i = i + 1
+}
+
+// console.log(patata)
