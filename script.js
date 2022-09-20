@@ -425,3 +425,52 @@ for (let patata = 0; patata < 10; patata = patata + 1) {
 }
 
 // console.log(patata)
+
+// EJEMPLO DE BUCLE CON VARIABLES EXTERNAS
+
+
+let lyrics = "Around the World, Around the World, Around the World"
+
+// bucle que vaya por todos los caracteres y me diga cuantas veces está la letra "o"
+let counter = 0; // la cantidad de letras "o"
+
+for (let i = 0; i < lyrics.length; i++) {
+
+  console.log( lyrics[i] )
+  if (lyrics[i] === "o") {
+    counter = counter + 1
+    // counter++
+  }
+
+}
+
+console.log("la cantidad de letras o es: ", counter)
+
+
+
+// EJEMPLO 2
+
+let strRaro = "4360000400050002000X45250000433400";
+// 1. todos los numeros menos los 0
+// 2. cuando llega a la X, deje de agregar numeros
+// 436452
+
+let newStr = "" // "436452"
+
+for (let i = 0; i < strRaro.length; i++) {
+
+  // si es 0, no lo incluyas. continue
+  if (strRaro[i] === "0") {
+    continue; // deten esta iteracion del bucle, y pasa a la siguiente
+  }
+  // si es X, deten el bucle. break.
+  if (strRaro[i] === "X") {
+    break; // deten TODO el bucle.
+  }
+
+  console.log(strRaro[i])
+  newStr = newStr + strRaro[i]
+
+}
+
+console.log(newStr)
